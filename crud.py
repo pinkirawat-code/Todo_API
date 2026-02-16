@@ -1,7 +1,6 @@
 from sqlalchemy.orm import Session
 import models, schemas
 
-
 def create_todo(db: Session, todo: schemas.TodoCreate):
     db_todo = models.Todo(**todo.model_dump())
     db.add(db_todo)
