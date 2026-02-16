@@ -8,7 +8,6 @@ def create_todo(db: Session, todo: schemas.TodoCreate):
     db.refresh(db_todo)
     return db_todo
 
-
 def get_todos(db: Session):
     return db.query(models.Todo).all()
 
